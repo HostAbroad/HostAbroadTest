@@ -1,0 +1,33 @@
+sudo: true
+before_script:
+  - cd HostAbroadTests/src/test/java/runner/
+  - sudo apt-get install junit
+  - sudo apt install maven
+  - sudo apt-get install gradle
+  - sudo apt-get install firefox xvfb
+  - Xvfb :10 -ac &
+  - export DISPLAY=:10
+  - gem install cucumber
+  - sudo apt-get install -y unzip xvfb libxi6 libgconf-2-4
+  - sudo apt-get install default-jdk 
+  - sudo curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add
+  - sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  - sudo apt-get -y update
+  - sudo apt-get -y install google-chrome-stable
+  - wget https://selenium-release.storage.googleapis.com/3.13/selenium-server-standalone-3.13.0.jar
+  - wget http://www.java2s.com/Code/JarDownload/testng/testng-6.8.7.jar.zip
+  - unzip testng-6.8.7.jar.zip
+  
+language: java
+
+script: 
+  - junit TestRunner
+  - cd src/
+  - cd ..
+  - gradle check
+  - mvn test
+
+jdk:
+- oraclejdk9
+- oraclejdk8
+- openjdk8
