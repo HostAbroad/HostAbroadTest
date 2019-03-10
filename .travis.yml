@@ -22,8 +22,7 @@ language: java
 
 script: 
   - junit TestRunner
-  - cd src/
-  - cd ..
+  - cd HostAbroadTests/
   - gradle check
   - mvn test
 
