@@ -23,7 +23,7 @@ script:
   - gradle check
   - mvn test
   - cd HostAbroadTests/src/test/java/com/HostAbroadTests/
-  - junit
+  - junit AppTest
 
 jdk:
 - oraclejdk9
