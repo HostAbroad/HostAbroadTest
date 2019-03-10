@@ -22,9 +22,10 @@ language: java
 
 script: 
   - junit TestRunner
-  - cd HostAbroadTests/
+  - cd HostAbroadTest/HostAbroadTests/
   - gradle check
   - mvn test
+  - ls HostAbroadTest/
 
 jdk:
 - oraclejdk9
