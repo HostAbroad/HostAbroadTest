@@ -1,6 +1,5 @@
 sudo: true
 before_script:
-  - cd HostAbroadTests/src/test/java/com/HostAbroadTests/
   - sudo apt-get install junit
   - sudo apt install maven
   - sudo apt-get install gradle
@@ -21,11 +20,10 @@ before_script:
 language: java
 
 script: 
-  - junit
-  - cd HostAbroadTest/
   - gradle check
   - mvn test
-  - ls HostAbroadTest/
+  - cd HostAbroadTests/src/test/java/com/HostAbroadTests/
+  - junit
 
 jdk:
 - oraclejdk9
