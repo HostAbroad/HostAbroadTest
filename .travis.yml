@@ -21,11 +21,11 @@ before_script:
 language: java
 
 script: 
-  - junit AppTest
-  - cd HostAbroadTest/HostAbroadTests/
+  - junit
+  - cd HostAbroadTest/
   - gradle check
   - mvn test
-  - ls HostAbroadTests/
+  - ls HostAbroadTest/
 
 jdk:
 - oraclejdk9
