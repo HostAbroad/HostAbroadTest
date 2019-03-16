@@ -19,10 +19,8 @@ before_script:
   - unzip testng-6.8.7.jar.zip
   
 script: 
-  - gradle check
   - mvn test
   - cd HostAbroadTests/src/test/java/com/HostAbroadTests/
-  - junit
 
 jdk:
 - oraclejdk9
