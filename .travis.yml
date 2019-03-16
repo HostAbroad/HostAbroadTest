@@ -20,7 +20,7 @@ before_script:
   
 script: 
   - cd HostAbroadTests/src/test/java/runner/
-  - junit TestRunner.java
+  - junit TestRunner
   
 
 jdk:
