@@ -21,7 +21,6 @@ before_script:
 install: true  
 script: 
   - cd HostAbroadTests/src/test/java/runner/
-  - ./mvn clean install
   - mvn test
   
 
