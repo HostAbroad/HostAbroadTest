@@ -18,9 +18,11 @@ before_script:
   - wget http://www.java2s.com/Code/JarDownload/testng/testng-6.8.7.jar.zip
   - unzip testng-6.8.7.jar.zip
   
+install: true  
 script: 
   - cd HostAbroadTests/src/test/java/runner/
-  - junit TestRunner
+  - ./mvnw clean install
+  - mvn test
   
 
 jdk:
