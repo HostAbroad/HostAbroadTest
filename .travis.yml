@@ -20,7 +20,8 @@ before_script:
   
 install: true  
 script: 
-  - ls
+  - cd HostAbroadTests
+  - mvn test
   
 
 jdk:
